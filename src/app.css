@@ -1,0 +1,26 @@
+@import "./lib/styles/reset.css";
+@import "./lib/styles/tokens.css";
+body {
+	font-family: var(--text-font), sans-serif;
+	font-size: var(--text-fs);
+	color: var(--text-fg-ci);
+	background: var(--c-gray-lighter);
+}
+:focus-visible {
+	outline: 2px solid var(--c-blue);
+	outline-offset: 3px;
+}
+button:disabled,
+input:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+input::placeholder {
+	color: var(--input-placeholder-fg-ci);
+}
+
+@media (max-width: 760px) {
+	body {
+		background: var(--c-white);
+	}
+}
